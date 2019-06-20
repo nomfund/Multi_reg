@@ -1,0 +1,22 @@
+~ .dropna(): better view the data and locate the NaN values to make sure you won't lose too many data points and also be able to understand what data will be lost
+
+~ sns.pairplot(): Try not explain the theory, but put it into context. Interpret it with respect to your data. What relationships did you find?
+
+~ variables_cols: Explain a bit on whether all variables will be used for modelling & why that is a good idea for your case. How were variables selected for modelling?
+
+~ plt.hist(salary_data['salary'],data=X_train, bins=20): label your axis. Best to keep dependent variable on y-axis
+
+~ df = pd.concat([salary_data,dummy],axis=1): drop 'Field' column here, otherwise your data now has duplicate data
+
+~ .corr() plot: Good interpretation. Try interpret more variables & show how this will help you select candidates for modelling
+
+~ Least squares line: Interpret plot
+
+~ Residuals plot: I dont think this is correct. Remember, the objective is to test the error of prediction of your model. This plot shows you the error of prediction for a different (Ridge()) model you have trained here ().
+Isuggest the sns.residplot() for your test set
+
+~ Model evaluation: It is best not to resample and retrained your model for evaluation. The model you are evaluating here is a linear regression model, different from the 'Multiple linear regression' model you developed earlier
+
+~ Visualizing: ..scatter(x, y) takes 2 inputs, x and y. Is it entirely correct to represent your findings this way 'plt.scatter(y_test,y_pred)'? Isn't it better to plot both of them on the y-axis and color code with a legend to visualise how much they differ?
+
+
